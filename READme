@@ -11,3 +11,5 @@ C値が高い → 最強の全肯定
 **意志と意志の間で生まれる「余白」を計算する装置**だ。
 
 ## ディレクトリ構成
+
+rc/ └── fourdc/ ├── engine.py      # メインエンジン ├── space.py       # 4D状態＋somatic_c ├── mari.py        # 応答反転ロジック（俺の魂） └── composer.py    # 音楽マッピング（後で実装） examples/ └── demo.py            # すぐ動くデモ
