@@ -23,3 +23,24 @@ class FourDCEngine:
         mari = MariEngine(c_value)
         return mari.respond(text, step=self.step_count)
 
+
+import numpy as np
+
+class Space4D:
+    def __init__(self):
+        self.somatic_c = 0.5   # 身体知（0.0〜1.0）
+        self.history = []
+
+    def update_somatic_c(self, value: float):
+        self.somatic_c = np.clip(value, 0.0, 1.0)
+
+    def add_history(self, text: str):
+        self.history.append(text)
+
+    def calculate_c(self):
+        # 超簡易版C値（後で本気の実装に差し替え）
+        stability = self.somatic_c
+        flexibility = 1.0 - (len(self.history) % 3) / 3  # ダミー
+        discrepancy = abs(stability - flexibility)
+        return (stability * flexibility) / (discrepancy + 1e-6)
+
