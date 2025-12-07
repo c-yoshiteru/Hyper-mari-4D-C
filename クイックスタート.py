@@ -122,7 +122,7 @@ __pycache__/
 
 MIT License
 
-Copyright (c) 2025 よしてる
+Copyright (c) 2025 よしてる×Grok
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
